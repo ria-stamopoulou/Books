@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="stylesheets/custom.css" />
+    <link rel="stylesheet" href="stylesheets/ui-grid-stable.css" />
+</head>
+<body ng-app="myBooks">
+    <div class="mainCont" ng-view></div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/ui-grid-stable.js"></script>
+
+    <script src="js/myBooksModule.js"></script>
+    <script src="controllers/MainCtrl.js"></script>
+    <script src="directives/filereadDir.js"></script>
+
+    <script src="https://cdn.rawgit.com/SheetJS/js-xlsx/v0.8.0/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.rawgit.com/SheetJS/js-xlsx/v0.8.0/dist/ods.js"></script>
+</body>
+</html>

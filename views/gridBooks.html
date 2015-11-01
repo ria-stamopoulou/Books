@@ -1,0 +1,16 @@
+﻿<div>
+    <button type="button" class="btn btn-success" ng-click="MainCtrl.reset()">Reset Grid</button>
+    <br />
+    <br />
+    <div id="grid1" ui-grid="MainCtrl.gridOptions" class="grid">
+        <div class="grid-msg-overlay" ng-show="!MainCtrl.gridOptions.data.length">
+            <div class="msg">
+                <div class="center">
+                    <span class="muted">Select Spreadsheet File</span>
+                    <br />
+                    <input type="file" accept=".xls,.xlsx,.ods" fileread="" opts="MainCtrl.gridOptions" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
