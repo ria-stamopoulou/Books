@@ -1,12 +1,24 @@
-﻿myBooks.controller('MainCtrl', function ($scope) {
-    $scope.gridOptions = {};
-    $scope.gridOptions.data = [];
-    $scope.gridOptions.columnDefs = [];
+﻿myBooks.controller('MainCtrl', ['$scope', function ($scope) {
+    var vm = this;
 
-    $scope.reset = reset;
+    vm.gridOptions = {};
+
+    vm.reset = reset;
 
     function reset() {
-        $scope.gridOptions.data = [];
-        $scope.gridOptions.columnDefs = [];
+        vm.gridOptions.data = [];
+        vm.gridOptions.columnDefs = [];
     }
-});
+
+    function highlightFilteredHeader (row, rowRenderIndex, col, colRenderIndex) {
+        if (col.filters[0].term) {
+            return 'header-filtered';
+        } else {
+            return '';
+        }
+    };
+
+    function testRia() {
+        console.log('hi there');
+    };
+}]);
